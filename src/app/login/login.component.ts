@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import{ Sample}from'src/app/login.service';
 import { from } from 'rxjs';
-import { unwrapResolvedMetadata } from '@angular/compiler';
+import{ Router,ActivatedRoute }from '@angular/router';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,7 +10,9 @@ import { unwrapResolvedMetadata } from '@angular/compiler';
 })
 export class LoginComponent implements OnInit {
 public demo =[];
-  constructor(private _Sample:Sample) { }
+  constructor(private _Sample:Sample,private router : Router) 
+  { }
+
 
   ngOnInit() {
       this._Sample.getstudent().subscribe(data => this.demo = data);
@@ -17,13 +20,24 @@ public demo =[];
   
   valid(uname,psw)
   {
+ 
     for(let i=0;i<=this.demo.length;i++)
     {
+      
       if(this.demo[i].id == uname && this.demo[i].password == psw)
       {
-       console.log("successful");
-      }
+       console.log("successful login ");
      
+       this.router.navigate(["request"]);
+       break;
+
+      }
+      if("admin"== uname && "admin"==psw )
+      {
+        this.router.navigate(["responce"]);
+        break;
+      }
+          
     }
   }
 

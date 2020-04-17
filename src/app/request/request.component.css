@@ -1,0 +1,10 @@
+h1{
+    color:rgb(72, 22, 165);
+}
+label{
+    color: rgb(80, 20, 220);
+    font-size: larger;
+}
+button{
+    background-color: darkcyan;
+}

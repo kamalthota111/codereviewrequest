@@ -1,16 +1,11 @@
-<h1>dsglu ehilure</h1>
-<form >
-   
-<div class="container">
+<form>
+    <div class="container">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" value="uname" #uname ngModel required>
+    <input type="text" placeholder="Enter Username" name="uname" #uname required  textsize="8c">
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" value="psw" #psw ngModel required>
-     <label>{{uname| json}}</label>
-    <button type="submit"(click)="valid(uname.value,psw.value)">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
+    <input type="password" placeholder="Enter Password" name="psw" #psw  required>
+    
+     <button  (click)="valid(uname.value,psw.value)"> Login </button>
   </div>
 </form>

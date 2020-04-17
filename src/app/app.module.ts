@@ -5,16 +5,24 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import {HttpClientModule} from "@angular/common/http";
 import{ Sample} from'./login.service';
-import { from } from 'rxjs';
+import { RequestComponent } from './request/request.component';
+import { Routes, RouterModule } from '@angular/router';
+import { ResponceComponent } from './responce/responce.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RequestComponent,
+    ResponceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+  
   ],
   providers: [Sample],
   bootstrap: [AppComponent]
