@@ -1,11 +1,17 @@
 <form>
-    <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" #uname required  textsize="8c">
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" #psw  required>
-    
-     <button  (click)="valid(uname.value,psw.value)"> Login </button>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title></title>
+    </head>
+    <body>
+  <div class="login-box">
+    <h1>  Login </h1>
+    <div class="textbox">
+      <i class="fas fa-lock"></i>
+      <input type="password" placeholder="Password" name="psw" #psw  >
+    </div>
+    <input type="button"  (click)="valid(psw.value)"class="btn" value="Sign in">
   </div>
-</form>
+    </body>
+  </html>

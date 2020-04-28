@@ -8,6 +8,8 @@ import{ Sample} from'./login.service';
 import { RequestComponent } from './request/request.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ResponceComponent } from './responce/responce.component';
+import{ FormsModule }from  '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -16,12 +18,14 @@ import { ResponceComponent } from './responce/responce.component';
     AppComponent,
     LoginComponent,
     RequestComponent,
-    ResponceComponent
+    ResponceComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   
   ],
   providers: [Sample],
